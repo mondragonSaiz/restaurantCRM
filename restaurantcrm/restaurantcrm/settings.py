@@ -67,7 +67,7 @@ WSGI_APPLICATION = 'restaurantcrm.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'restaurantdb',
+        'NAME': 'restaurantcrmdb',
         'USER': 'root',
         'PASSWORD': 'abcd1234',
         'HOST': 'localhost',
