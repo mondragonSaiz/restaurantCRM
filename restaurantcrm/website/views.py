@@ -52,8 +52,8 @@ def register_user(request):
 def restaurant_record(request, pk):
     if request.user.is_authenticated:
         #check specified restaurant in db
-        customer_record = Restaurant.objects.get(id=pk)
-        return render(request, 'restaurant.html', {'customer_record': customer_record})
+        restaurant_record = Restaurant.objects.get(id=pk)
+        return render(request, 'restaurant.html', {'restaurant_record': restaurant_record})
     else:
         messages.success(request, "You must be logged in to view the specified restaurant")
         return redirect('home')

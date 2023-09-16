@@ -2,6 +2,7 @@
 <table class="table table-dark table-striped mt-5 table-hover table-bordered">
   <thead class="table-light">
     <tr>
+      <th scope="col">ID</th>
       <th scope="col">Name</th>
       <th scope="col">Type</th>
       <th scope="col">Address</th>
@@ -12,6 +13,9 @@
   <tbody>
     {%if restaurants %} {% for restaurant in restaurants%}
     <tr>
+      <td>
+        <a href="{% url 'restaurant' restaurant.id %}">{{restaurant.id}}</a>
+      </td>
       <td>{{restaurant.rest_name}}</td>
       <td>{{restaurant.cuisine}}</td>
       <td>{{restaurant.address}}</td>
@@ -67,7 +71,6 @@
       <td>{{restaurant.cuisine}}</td>
       <td>{{restaurant.address}}</td>
       <td>{{restaurant.phone}}</td>
-
       {% endfor %} {% endif %}
     </tr>
   </tbody>
