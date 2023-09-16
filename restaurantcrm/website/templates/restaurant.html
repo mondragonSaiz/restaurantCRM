@@ -1,15 +1,17 @@
 {% extends 'base.html' %} {% block content %}
 <div class="mt-5">
   <div class="card text-center text-bg-dark">
-    <div class="card-header">Restaurant information</div>
+    <div class="card-header">Restaurant information </div>
+    <div class="d-flex justify-content-start"><a href={% url 'home' %} class="mx-3 btn btn-outline-light fixed-end">Go back</a></div>
     <div class="card-body">
       <h5 class="card-title fs-1">{{restaurant_record.rest_name}}</h5>
       <p><strong>Type :</strong> {{restaurant_record.cuisine}}</p>
       <p><strong>Address :</strong> {{restaurant_record.address}}</p>
       <p><strong>Phone :</strong> {{restaurant_record.phone}}</p>
 
-      <a href={% url 'home' %} class="btn btn-secondary">Go back</a>
+      
       <a href={% url 'delete_restaurant' restaurant_record.id %} class="btn btn-danger">Delete</a>
+      <a href={% url 'update_restaurant' restaurant_record.id %} class="btn btn-warning">Update</a>
     </div>
     <div class="card-footer text-body-primary">
       <strong>Created at : </strong>{{restaurant_record.created_at}}

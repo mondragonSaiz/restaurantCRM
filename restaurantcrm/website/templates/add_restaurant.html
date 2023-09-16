@@ -4,8 +4,9 @@
   <h1>Restaurant information</h1>
   <form method="POST" action="">
     {% csrf_token %} {{form.as_p}}
-    <div class="flex text-center">
-      <button type="submit" class="btn btn-success">Add restaurant</button>
+    <div class="flex text-center flex-nowrap">
+      <button type="submit" class="btn btn-outline-success">Add restaurant</button>
+      <a href={% url 'home' %} class="mx-3 btn btn-outline-danger fixed-end">Cancel</a>
     </div>
   </form>
 </div>

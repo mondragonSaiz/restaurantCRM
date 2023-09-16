@@ -90,7 +90,7 @@ def update_restaurant(request, pk):
             form.save()
             messages.success(request, "Restaurant updated succesfully.")
             return redirect('home')
-        return render(request, 'update.restaurant.html', {'form': form})
+        return render(request, 'update.restaurant_html', {'form': form})
     else:
         messages.success(request, "You must be logged in to update restautant.")
         return redirect('home')
