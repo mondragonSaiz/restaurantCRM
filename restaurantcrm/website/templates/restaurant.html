@@ -9,7 +9,7 @@
       <p><strong>Phone :</strong> {{restaurant_record.phone}}</p>
 
       <a href={% url 'home' %} class="btn btn-secondary">Go back</a>
-      <a href={% url 'home' %} class="btn btn-danger">Delete</a>
+      <a href={% url 'delete_restaurant' restaurant_record.id %} class="btn btn-danger">Delete</a>
     </div>
     <div class="card-footer text-body-primary">
       <strong>Created at : </strong>{{restaurant_record.created_at}}

@@ -58,3 +58,13 @@ def restaurant_record(request, pk):
         messages.success(request, "You must be logged in to view the specified restaurant")
         return redirect('home')
     
+
+def delete_restaurant(request, pk):
+    if request.user.is_authenticated:
+        delete_res = Restaurant.objects.get(id=pk)
+        delete_res.delete()
+        messages.success(request, "Restaurant deleted succesfully.")
+        return redirect('home')
+    else:
+        messages.success(request, "You must be logged in to delete restautant.")
+        return redirect('home')
