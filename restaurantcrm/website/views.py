@@ -71,4 +71,4 @@ def delete_restaurant(request, pk):
 
 def add_restaurant(request):
     #if request.method == 'POST':
-    return render(request, 'add_record.html', {})
+    return render(request, 'add_restaurant.html', {})
