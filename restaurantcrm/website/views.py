@@ -2,8 +2,11 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .forms import SignUpForm
+from .models import Restaurant
+
 # Create your views here.
 def home(request):
+    restaurants = Restaurant.objects.all()
     # check if logged in
     if request.method == 'POST':
         username = request.POST['username']
@@ -18,7 +21,7 @@ def home(request):
             messages.success(request, "Error while logging in. Please try again.")
             return redirect('home')
     else:
-        return render(request, 'home.html', {})
+        return render(request, 'home.html', {'restaurants': restaurants})
     
 
 def logout_user(request):
