@@ -70,5 +70,14 @@ def delete_restaurant(request, pk):
         return redirect('home')
 
 def add_restaurant(request):
-    #if request.method == 'POST':
-    return render(request, 'add_restaurant.html', {})
+    form = AddRestaurantForm(request.POST or None)
+    if request.user.is_authenticated:
+        if request.method == "POST":
+            if form.is_valid():
+                add_restaurant = form.save()
+                messages.success(request, "Restaurant added succesfully.")
+                return redirect('home')
+        return render(request, 'add_restaurant.html', {'form': form})
+    else:
+        messages.success(request, "You must be logged in to add restaurant.")
+        return redirect('home')
