@@ -81,3 +81,16 @@ def add_restaurant(request):
     else:
         messages.success(request, "You must be logged in to add restaurant.")
         return redirect('home')
+
+def update_restaurant(request, pk):
+    if request.user.is_authenticated:
+        existing_restaurant = Restaurant.objects.get(id=pk)
+        form = AddRestaurantForm(request.POST or None, instance=existing_restaurant)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Restaurant updated succesfully.")
+            return redirect('home')
+        return render(request, 'update.restaurant.html', {'form': form})
+    else:
+        messages.success(request, "You must be logged in to update restautant.")
+        return redirect('home')
