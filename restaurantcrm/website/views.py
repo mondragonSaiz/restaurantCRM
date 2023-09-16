@@ -68,3 +68,7 @@ def delete_restaurant(request, pk):
     else:
         messages.success(request, "You must be logged in to delete restautant.")
         return redirect('home')
+
+def add_restaurant(request):
+    #if request.method == 'POST':
+    return render(request, 'add_record.html', {})
