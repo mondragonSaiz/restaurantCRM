@@ -3,16 +3,23 @@ from django.contrib.auth.models import User
 from django import forms
 from .models import Restaurant
 
+# we deine the SignUpForm class, which inherits from UserCreationForm. 
 class SignUpForm(UserCreationForm):
     email = forms.EmailField(label="", widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Email Address'}))
     first_name = forms.CharField(label="", max_length=80, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'First Name'}))
     last_name = forms.CharField(label="", max_length=80, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Last Name'}))
-
+    # This Meta class inside the SignUpForm class is used to specify metadata about the form. 
+    # It defines the model associated with the form (in this case - User, which is the built-in user model in Django)
+    # and the fields that should be included in the form. These fields include the username, first name, last name, email, and password field
     class Meta:
         model = User
         fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2')
 
-# Initialize
+    # Initialize SignUpForm
+    # This code is defining the __init__ method for the SignUpForm class,
+    # which is a customization of the built-in Django UserCreationForm. 
+    # The __init__ method is used to customize the form's appearance and behavior 
+    # by modifying its field widgets, labels, and help text
     def __init__(self, *args, **kwargs):
         super(SignUpForm, self).__init__(*args, **kwargs)
 
