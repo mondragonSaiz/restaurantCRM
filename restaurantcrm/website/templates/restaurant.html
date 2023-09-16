@@ -9,25 +9,13 @@
       <p><strong>Phone :</strong> {{restaurant_record.phone}}</p>
 
       <a href={% url 'home' %} class="btn btn-secondary">Go back</a>
+      <a href={% url 'home' %} class="btn btn-danger">Delete</a>
     </div>
     <div class="card-footer text-body-primary">
       <strong>Created at : </strong>{{restaurant_record.created_at}}
     </div>
   </div>
-  {% comment %}
-  <div class="card">
-    <div class="card-header">{{restaurant_record.rest_name}}</div>
-    <div class="card-body">
-      <blockquote class="blockquote mb-0">
-        <p>{{restaurant_record.cuisine}}</p>
-        <p>{{restaurant_record.address}}</p>
-        <p>{{restaurant_record.phone}}</p>
-        <footer class="blockquote-footer">
-          {{restaurant_record.created_at}}
-        </footer>
-      </blockquote>
-    </div>
-    {% endcomment %}
+ 
   </div>
 
   {% endblock %}
