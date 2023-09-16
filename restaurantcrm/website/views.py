@@ -6,6 +6,7 @@ from .models import Restaurant
 
 # Create your views here.
 def home(request):
+    # we get all of the objects from db
     restaurants = Restaurant.objects.all()
     # check if logged in
     if request.method == 'POST':
@@ -47,4 +48,13 @@ def register_user(request):
 
     return render(request, 'register.html', {'form': form})
 
+
+def restaurant_record(request, pk):
+    if request.user.is_authenticated:
+        #check specified restaurant in db
+        customer_record = Restaurant.objects.get(id=pk)
+        return render(request, 'restaurant.html', {'customer_record': customer_record})
+    else:
+        messages.success(request, "You must be logged in to view the specified restaurant")
+        return redirect('home')
     
