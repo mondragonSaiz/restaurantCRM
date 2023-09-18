@@ -53,7 +53,7 @@ DATABASES = {
 
 You can create an admin user who can add, update, and delete restaurants through the Django admin interface.
  ```bash
-     python manage.py createsuperuser
+python manage.py createsuperuser
 ```
 
 ### Running the Development Server
@@ -88,7 +88,10 @@ Feel free to customize this README file according to your project's specific det
 
 
 
+<img width="1408" alt="Screen Shot 2023-09-17 at 23 38 33" src="https://github.com/mondragonSaiz/restaurantCRM/assets/71055501/fc3fed87-69d4-44e6-9982-ee6782c20481">
 
+
+![Uploading Screen Shot 2023-09-17 at 23.39.07.png…]()
 
 
 
