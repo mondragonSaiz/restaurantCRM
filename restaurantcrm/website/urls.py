@@ -9,6 +9,6 @@ urlpatterns = [
     path('restaurant/<int:pk>', views.restaurant_record, name='restaurant'),
     path('delete_restaurant/<int:pk>', views.delete_restaurant, name="delete_restaurant"),
     path('add_restaurant', views.add_restaurant, name='add_restaurant'),
-     path('update_restaurant/<int:pk>', views.update_restaurant, name="update_restaurant"),
+    path('update_restaurant/<int:pk>', views.update_restaurant, name="update_restaurant"),
 
 ]
