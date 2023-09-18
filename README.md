@@ -30,7 +30,7 @@ source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 ### Install Dependencies
 - Create a MySQL database for your project.
 - Update the database settings in settings.py:
-
+```python
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -41,7 +41,7 @@ DATABASES = {
         'PORT': '',           # Leave empty for default MySQL port
     }
 }
-
+```
  - Apply migrations to create the database tables:
 
    ```bash
