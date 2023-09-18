@@ -87,7 +87,8 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
   
 Feel free to customize this README file according to your project's specific details and requirements. It's important to provide clear and concise instructions so that others can easily set up and use your project.
 
-
+## Walkthrough video
+https://youtu.be/25Jl8xXfBpQ
 
 <img width="1408" alt="Screen Shot 2023-09-17 at 23 38 33" src="https://github.com/mondragonSaiz/restaurantCRM/assets/71055501/fc3fed87-69d4-44e6-9982-ee6782c20481">
 
