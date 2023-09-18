@@ -82,8 +82,9 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
 ## Acknowledgments
-Django - The web framework used
-MySQL - The database used
+* Django -  web framework used
+* MySQL -  database used
+* 
 Feel free to customize this README file according to your project's specific details and requirements. It's important to provide clear and concise instructions so that others can easily set up and use your project.
 
 
