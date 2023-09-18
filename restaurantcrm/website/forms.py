@@ -21,8 +21,12 @@ class SignUpForm(UserCreationForm):
     # The __init__ method is used to customize the form's appearance and behavior 
     # by modifying its field widgets, labels, and help text
     def __init__(self, *args, **kwargs):
+        # This line calls the constructor of the parent class (super) and initializes the 
+        # form with any additional arguments passed to it.
         super(SignUpForm, self).__init__(*args, **kwargs)
 
+        # We then set the HTML class attribute of the 'username' field widget to 'form-control' and so on. 
+        # commonly used for applying CSS styles and other html attributes to the fields.
         self.fields['username'].widget.attrs['class'] = 'form-control'
         self.fields['username'].widget.attrs['placeholder'] = 'username'
         self.fields['username'].label = ''
@@ -47,6 +51,7 @@ class AddRestaurantForm(forms.ModelForm):
     address = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={"placeholder": "Address", "class": "form-control"}), label="")
     phone = forms.CharField(required=True, widget=forms.widgets.TextInput(attrs={"placeholder": "Phone", "class": "form-control"}), label="")
 
+# specify the model associated with the form and exclude specific fields from the form.
     class Meta:
         model = Restaurant
         exclude = ("user",)
