@@ -65,9 +65,9 @@ python manage.py runserver
 The development server will start, and you can access the project in your web browser at http://127.0.0.1:8000/.
 
 ## Usage
-Access the restaurant listing at http://127.0.0.1:8000/.
-Log in with your superuser credentials at http://127.0.0.1:8000/admin/ to access the admin panel for CRUD operations on restaurants.
-Createing an account is required to make changes in restaurant list.
+- Access the restaurant listing at http://127.0.0.1:8000/.
+- Log in with your superuser credentials at http://127.0.0.1:8000/admin/ to access the admin panel for CRUD operations on restaurants.
+- Creating an account is required to make changes (CRUD) in restaurant list.
 
 ##  Contributing
 Contributions are welcome! If you'd like to contribute to this project, please follow these guidelines:
