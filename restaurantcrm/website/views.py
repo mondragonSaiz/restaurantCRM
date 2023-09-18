@@ -31,7 +31,7 @@ def home(request):
     else:
         return render(request, 'home.html', {'restaurants': restaurants})
     
-
+# log the user out of their current session.
 def logout_user(request):
     logout(request)
     messages.success(request, "You have been logged out.")
