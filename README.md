@@ -38,7 +38,7 @@ DATABASES = {
         'USER': 'your_database_user',
         'PASSWORD': 'your_database_password',
         'HOST': 'localhost',  # Or your database host
-        'PORT': '',           # Leave empty for default MySQL port
+        'PORT': '',           # 3306 for default MySQL port
     }
 }
 ```
