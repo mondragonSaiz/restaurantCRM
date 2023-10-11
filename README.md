@@ -69,14 +69,7 @@ The development server will start, and you can access the project in your web br
 - Log in with your superuser credentials at http://127.0.0.1:8000/admin/ to access the admin panel for CRUD operations on restaurants.
 - Creating an account is required to make changes (CRUD) in restaurant list.
 
-##  Contributing
-Contributions are welcome! If you'd like to contribute to this project, please follow these guidelines:
 
-- Fork the repository
-- Create your branch: git checkout -b feature/your-feature
-- Make your changes and commit them: git commit -m 'Add some feature'
-- Push to the branch: git push origin feature/your-feature
-- Create a pull request
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
